@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+.app__container {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    padding: 20px 3%;
+}
+.app__left {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0.5;
+    z-index: 10;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__right {
+    min-height: 80vh;
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__right img {
+    width: 120% !important;
+    margin-left: -20%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.app__left h1 {
+    font-size: 48px;
+    color: #241815;
+    font-weight: 700;
+    line-height: 56px;
 }
 
-.App-link {
-  color: #61dafb;
+.app__left p {
+    font-size: 24px;
+    color: #241815;
+    font-weight: 300;
+    line-height: 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app_input {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin-top: 30px;
+    box-shadow: 1px 9px 20px 6px rgba(9,2,34,.07);
+}
+.app_input i {
+    margin-left: 10px;
+}
+.app_input input {
+    border: none !important;
+    outline: none;
+    padding: 20px;
+    margin-bottom: 0 !important;
+    height: 100%;
+}
+
+.app_input input:focus {
+    box-shadow: none !important;
+}
+.app_input button {
+    border: none;
+    outline: none;
+    background-color: #fd5444;
+    padding: 20px;
+    min-width: fit-content;
+    color: white;
+}
+
+@media (max-width: 420px) {
+    .app__container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .app__left {
+        justify-content: flex-start;
+        min-height: fit-content;
+        padding: 0 0 50px 0;
+    }
+    .app__left h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .app__left p {
+        font-size: 19px;
+        line-height: 29px;
+    }
+    .app__right {
+        align-items: flex-start;
+    }
+    .app__right img {
+        width: 100%;
+        margin-left: 0;
+    }
+    .app_input {
+        width: 100%;
+    }
 }
